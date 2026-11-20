@@ -1,0 +1,10 @@
+{
+  "name": "las bravas demo",
+  "description": "Plataforma integral de gestión laboral asistida por IA para firmas digitales, asistencia, permisos, correos empresariales y asistente de voz.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

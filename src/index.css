@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-sans: 'Public Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    /* Minimalist palette: White + Muted Light Opaque Orange + Light Plomo */
+    --bravas-bg: #F7F7F8;
+    --bravas-surface: #FFFFFF;
+    --bravas-plomo-soft: #EFEFF1;
+    --bravas-border: #E2E4E8;
+    --bravas-ink: #23272E;
+    --bravas-ink-muted: #5C626D;
+    --bravas-orange: #B26337;
+    --bravas-orange-hover: #99522B;
+    --bravas-orange-soft: #FBF4EE;
+    --bravas-orange-border: #E6CDBE;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: var(--bravas-ink);
+    background-color: var(--bravas-bg);
+    font-size: 16px;
+  }
+
+  html[data-large-text="true"] {
+    font-size: 18px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  header,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
